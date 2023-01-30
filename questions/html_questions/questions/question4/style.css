@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 960px;
+  margin: 50px auto;/*全体に中央揃えのmarginを設定する*/
+  /*text-align: center;の削除----文字の中央揃えを解除*/
+}
+
+.item-list {
+  margin-bottom: 50px;
+}
+
+.item {
+  padding: 20px;
+  list-style: none;
+}
+
+.item:nth-child(odd) {
+  background-color: #eee;
+}
+
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #ffd700;
+  width: 30%;
+  height: 200px;
+  margin-right: 5%;
+  margin-bottom: 40px;
+}
+
+.box:first-child,
+.box:nth-child(5),
+.box:last-child {
+  background-color: #ff8c00;
+}
+
+.box:nth-child(3n) {
+  margin-right: 0;/* margin-rightを10%から0%に変更----3の倍数の要素の右にmarginが作られる命令を解除*/
+}
+
+.box:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
